@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="form1.css">
+</head>
+<body>    
+    <div ng-app="" class="cen">
+        <form name="myForm" novalidate="">
+            <h2>We will get back to you</h2>
+            <label>Full Name</label>
+            <input type="text" name="name" ng-model="name" pattern="[a-zA-Z]{1,}" required=""><br>
+            <span ng-show="myForm.$submitted || myForm.name.$dirty">
+                <span class="error" ng-show="myForm.name.$error.required"><i class="fa fa-exclamation-circle"></i> Name
+                    Required</span>
+                <span class="error" ng-show="myForm.name.$error.pattern"><i class="fa fa-exclamation-circle"></i> Name
+                    cannot be Number</span>
+            </span><br><br>
+    
+            <label>Gender</label><br>
+            <input type="radio" name="gender" ng-model="gender" ng-value="&quot;Male&quot;" required="">
+            <label>Male</label>
+            <input type="radio" name="gender" ng-model="gender" ng-value="&quot;Female&quot;" required="">
+            <label>Female</label>
+            <span ng-show="myForm.$submitted || myForm.gender.$dirty">
+                <span class="error" ng-show="myForm.gender.$error.required"><i class="fa fa-exclamation-circle"></i> Gender
+                    Required</span>
+            </span><br><br>
+    
+            <label>Date of Birth</label>
+            <input type="date" name="date" ng-model="date" required=""><br>
+            <span ng-show="myForm.$submitted || myForm.date.$dirty">
+                <span class="error" ng-show="myForm.date.$error.required"><i class="fa fa-exclamation-circle"></i> Date of
+                    Birth Required</span>
+            </span><br><br>
+    
+            <label>Address</label>
+            <textarea name="address" ng-model="address" required=""></textarea><br>
+            <span ng-show="myForm.$submitted || myForm.address.$dirty">
+                <span class="error" ng-show="myForm.address.$error.required"><i class="fa fa-exclamation-circle"></i>
+                    Address Required</span>
+            </span><br><br>
+    
+            <label>Phone Number</label>
+            <input type="number" name="phone" ng-model="phone" ng-minlength="10" ng-maxlength="10" required=""><br>
+            <span ng-show="myForm.$submitted || myForm.phone.$dirty">
+                <span class="error" ng-show="myForm.phone.$error.required"><i class="fa fa-exclamation-circle"></i> Phone
+                    Number Required</span>
+                <span class="error"
+                    ng-show="((myForm.phone.$error.minlength || myForm.phone.$error.maxlength) &amp;&amp; myForm.phone.$dirty)"><i
+                        class="fa fa-exclamation-circle"></i> Phone Number Should be 10 digits</span>
+            </span><br><br>
+                
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background: url('AboutBg.png');
+    background-position: 0 0;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+h1 {
+    color: grey;
+    font-size: 5rem;
+    font-weight: 750;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+    font-family:  Montserrat;
+}
+.desc p {
+    color: black;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    font-family:  Kanit;
+}
+.desc1 {
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.desc2 {
+    position: relative;
+    top: 1rem;
+    
+}
+
+.image{
+    margin-top: 12rem;
+    margin-bottom: 5rem;
+}
+
+.image img{
+    width: 160px;
+}
+
+

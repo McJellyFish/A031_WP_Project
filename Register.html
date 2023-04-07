@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Register </title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(RegisterPage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: white;
+  width: 500px;
+  position: relative;
+  left: 10%;
+  bottom: -5rem;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+button{
+    width: 455px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid blue;
+    background: transparent;
+    color: blue;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+span{
+    background: black;
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: 2px solid white;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<form action="form.php" method="post">
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to register yourself for the latest arrivals.</p>
+    <hr>
+
+    <label for="psw"><b>Name</b></label>
+    <input type="text" placeholder="Your name" name="psw" id="psw" required>
+
+    <label for="dob"><b>Date of Birth</b></label> <br> <br>
+    <input type="date" placeholder="Your birthdate" name="dob" id="dob" required> <br> <br>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw-repeat"><b>Phone Number</b></label>
+    <input type="text" placeholder="Phone Number" name="phone" id="psw-repeat" required>
+    <hr>
+    <p>By registering you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" name="save"><span></span>Register</button>
+  </div>
+  
+</form>
+</body>
+</html>
